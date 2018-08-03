@@ -216,7 +216,7 @@ function processImage(fileName) {
     };
 
     // image url
-    var sourceImageUrl = 'http://kr-ocr.azurewebsites.net/uploads/' + fileName;
+    var sourceImageUrl = 'http://taiho-ocr.azurewebsites.net/uploads/' + fileName;
     console.log(sourceImageUrl);
 
     // Perform the REST API call.
@@ -274,7 +274,7 @@ function analysisImg(type) {
 }
 
 function ocrDataProcessing(regions, fileName) {
-    //console.log(regions);
+    console.log(regions);
     var lineText = []
     var docDate, companyName, contractName, email,
         price1, price2, price3,
@@ -675,14 +675,14 @@ function ocrDataProcessing(regions, fileName) {
     detail = validationCheck(detail);
     etc = validationCheck(etc);
 
-    send_company = validationCheck(send_company);
-    send_tel = validationCheck(send_tel);
-    send_fax = validationCheck(send_fax);
-    send_person = validationCheck(send_person);
-    receive_company = validationCheck(receive_company);
-    receive_tel = validationCheck(receive_tel);
-    receive_fax = validationCheck(receive_fax);
-    receive_person = validationCheck(receive_person);
+    //send_company = validationCheck(send_company);
+    //send_tel = validationCheck(send_tel);
+    //send_fax = validationCheck(send_fax);
+    //send_person = validationCheck(send_person);
+    //receive_company = validationCheck(receive_company);
+    //receive_tel = validationCheck(receive_tel);
+    //receive_fax = validationCheck(receive_fax);
+    //receive_person = validationCheck(receive_person);
 
     bookingNum = validationCheck(bookingNum);
     shipper = validationCheck(shipper);
