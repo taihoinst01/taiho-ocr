@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TIIZ OCR Service</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+    <link type="text/css" rel="stylesheet" href="css/common.css" media="all" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/common.ui.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <div id="header_wrap02"><div id="header"> <a class="logo" href="#"><span class="hc">TIIZ OCR Service</span></a> </div></div>
+        <!-- //Header -->
+
+        <div id="wrap">
+            <div id="container">
+                <!-- 저장소 -->
+                <div class="sub_cont_l">
+                    <div class="subt_wrap"><h1 class="subtit01">저장소</h1></div>
+                    <div class="tbl_area">
+                        <div class="tbl_area_l">
+                            <a href="javascript:void(0);" class="btn b03 date on" alt="all">전체</a>
+                            <a href="javascript:void(0);" class="btn b03 date" alt="today">오늘</a>
+                            <a href="javascript:void(0);" class="btn b03 date" alt="week">1주</a>
+                            <a href="javascript:void(0);" class="btn b03 date" alt="month">1달</a>
+                            <input type="text" name="fdate" id="fdate" value="2016-01-12" style="width:100px" title="시작일자" /> ~
+                            <input type="text" name="tdate" id="tdate" value="2016-01-12" style="width:100px;" title="종료일자" />
+                        </div>
+                        <div class="tbl_area_r">
+                            <form id="uploadForm">
+                                <input type="file" name="uploadFile" id="uploadFile" style="display:none;" />
+                            </form>
+                            <a href="javascript:void(0);" id="uploadBtn" class="btn b03" style="width: 38px;">업로드</a>
+                        </div>
+                    </div>
+                    <div class="tbl_area_r">
+                        <span class="mtm10"> 총 <strong>0</strong> 건</span>
+                    </div>
+                    <div class="Tbl_wrap">
+                        <table class="Tbl" summary="저장소">
+                            <caption>저장소</caption>
+                            <colgroup>
+                                <col width="10%">
+                                <col width="60%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><input name="imgCheck" type="checkbox" value="all"> </th>
+                                    <th>파일명 </th>
+                                    <th>등록일</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="Tbl_wrap02">
+                        <table class="Tbl" summary="저장소">
+                            <caption>저장소</caption>
+                            <colgroup>
+                                <col width="10%">
+                                <col width="60%">
+                                <col width="30%">
+                            </colgroup>
+                            <tbody id="result"></tbody>
+                        </table>
+                    </div>
+                    <div class="tbl_area">
+                        <div class="tbl_area_l">
+                            <span class="mtp10">선택 <strong>0</strong> 건</span>
+                        </div>
+                        <div class="tbl_area_r">
+                            <a href="javascript:void(0);" id="ocrBtn" class="btn">양식 분석</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //저장소 -->
+                <!-- 양식 분석 결과 -->
+                <div class="sub_cont_r">
+                    <!-- <div class="info_m">저장소에서 파일 선택 후 양식 분석을 하시면<br/><strong>결과 내용이 표시</strong>됩니다. </div>-->
+                    <div class="subt_wrap">
+                        <h1 class="subtit01">양식 분석 결과</h1>
+                    </div>
+                    <div class="rbox">
+                        <p class="tex01">분석 상세 내용</p>
+                        <p class="tex02">
+                            <span class="tnum01">0</span>
+                            <span class="tnum02"><img src="images/ico_doc.gif" alt="문서">총 분석 문서</span>
+                        </p>
+                        <div class="rbox_wrap">
+                            <div class="rb_l">
+                                <p class="t01">0</p>
+                                <p class="t05">확인된 양식의 문서</p>
+                                <p><a href="javascript:void(0);" id="sucessExcelBtn" class="btn b02">엑셀 저장</a></p>
+                            </div>
+                            <div class="rb_c"></div>
+                            <div class="rb_l">
+                                <p class="t04">0</p>
+                                <p class="t05">미확인된 양식의 문서</p>
+                                <p><a href="javascript:void(0);" id="failExcelBtn" class="btn b02">엑셀 저장</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //양식 분석 결과 -->
+                </div>
+            </div>
+            <!--footer -->
+            <div id="footer"><p>COPYRIGHTS <strong>TAIHOINST</strong>  ALL RIGHTS RESERVED.</p> </div>
+
+        </div>
+    </div>
+</body>
+</html >

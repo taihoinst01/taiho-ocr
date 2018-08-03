@@ -1,0 +1,196 @@
+﻿/* ----------------------------------------------------------------------------------------------------
+Site : TIIZ_OCR_Service
+Version :  2018.03
+---------------------------------------------------------------------------------------------------- */
+
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothic-Bold.eot);
+  src: url(../font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-Bold.woff2) format('woff2'),
+       url(../font/NanumGothic-Bold.woff) format('woff'),
+       url(../font/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic-Regular.eot);
+  src: url(../font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-Regular.woff2) format('woff2'),
+       url(../font/NanumGothic-Regular.woff) format('woff'),
+       url(../font/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothic-ExtraBold.eot);
+  src: url(../font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(../font/NanumGothic-ExtraBold.woff) format('woff'),
+       url(../font/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+
+
+html, body { height:100%;font-size:13px; color:#38383c ;line-height:150%;font-family:나눔고딕,Nanum Gothic, 돋움,Dotum,Helvetica,Verdana,Arial,sans-serif; background-color:#eee    }
+body, p, ul, ol, li, dl, dt, dd, form, table, th, td, fieldset, input, textarea, select, button, h1, h2, h3, h4, h5, h6, pre {margin:0; padding:0; }
+ol, ul,li { list-style:none; }
+blockquote, q { quotes:none; }
+header, footer, nav, aside, section, article {display:block;}
+fieldset, img , iframe {border:0;}
+em,address{font-style:normal}
+.fl{float:left;} 
+.fr{float:right;} 
+.tc{text-align:center;} 
+.cb{clear:both;}
+.hc{visibility:hidden;overflow:hidden;position:absolute;left:-1000em;width:0;height:0;font-size:0;line-height:0}
+.nc,hr{display:none !important}
+img {-ms-interpolation-mode:bicubic !important;}
+img,table,fieldset,button{ border:0}
+a,img,input,span,button {outline: none;selector-dummy:expression(this.hideFocus=true);}
+table {border-collapse:collapse;border-spacing:0; table-layout:fixed;}
+legend, caption {position:absolute; overflow:hidden; visibility:hidden; width:0; height:0; font-size:0; line-height:0;}
+a:link, a:visited, a:hover, a,active, a:focus { text-decoration:none; cursor:pointer;  }
+input,select,textarea{font-family:나눔고딕,Nanum Gothic, 돋움,Dotum,Helvetica,Verdana,Arial,sans-serif; color:#505153; }
+
+/* form */
+input[type=text], input[type=password] { height:30px; padding:0; border:1px solid #ccc;  color:#6c6c6c; text-indent:7px; line-height:30px; }
+input[type=checkbox] { margin:0 ; padding:0; vertical-align:middle; }
+input[type=radio] { margin:0 ; padding:0; vertical-align:middle; }
+input.file { height:24px; padding:0; border:1px solid #ccc; background:#fff; color:#000; text-indent:10px; line-height:24px;  }
+input.req,select.req ,textarea.req  {background-color: #faf7ed; color:#cbcbcd}
+input.readonly,select.readonly ,textarea.readonly {background-color: #eaeaef ;color:#cbcbcd}
+textarea { padding:5; border: solid 1px #ccc; padding:0.5%; line-height:22px }
+select { height:30px; line-height:30px; border:1px solid #ccc; *border:none; color:#6c6c6c; padding:0 0 0 6px; vertical-align:middle  }
+input[type=text].fileInputText{float:left;border:1px solid #ddd;margin:0;padding:0 5px}
+input[type=button].fileInputButton{float:right;border:solid 1px #ccc;background:#ddd;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;margin:0;padding:0; cursor:pointer}
+.readonly {background-color: #eaeaef ;color:#cbcbcd}
+.mtm10{ display:inline-block; margin-top:10px}
+.mtp10{ display:inline-block; margin-top:-10px}
+
+/* Layout */
+#wrapper{ width:100%; height:100%; }
+#wrap{  width:100%; text-align:center; margin-top:35px; }
+#container{position: relative; width:1230px; margin:auto  }
+.sub_cont_l{ width:665px; height:640px; float:left; background-color:#fff; padding:20px ; border-radius:5px }
+.sub_cont_r{ width:460px;height:640px;float:left; margin-left:25px ;background-color:#fff;padding:20px ; border-radius:5px }
+
+/* Head */
+#header_wrap{ width:100%; height:60px; background: #244db7; min-width:1380px}
+#header_wrap02{  width:100%; height:60px; background: #244db7; min-width:1380px}
+#header{ width:100%; display:inline-block}
+#header .logo{ width:201px; height:33px; background:url(../images/logo.png) no-repeat ; float:left; margin:12px 0 0 20px; }
+
+/* 서브타이틀 */
+.subt_wrap{ width:100%; display:inline-block; margin:10px 0 30px 0}
+h1.subtit01{ font-size:26px; font-weight:bold;float:left; color:#292a2a }
+
+/* 버튼영역 */
+.tbl_area{ width:100%;display:inline-block; margin:10px 0 10px 0;line-height:30px;height:30px}
+.tbl_area.gridw{ height:auto; margin-bottom:30px}
+.tbl_area_l{ width:70%; float:left; text-align:left }
+.tbl_area_r{ width:30%; float:right; text-align:right }
+
+/* 기본 table */
+.Tbl_wrap{width:100%;display:inline-block;border-top: solid 2px #244db7}
+.Tbl_wrap02{height:410px; overflow-x:hidden; overflow-y:auto}
+.Tbl_wrap_br{width:98%;display:inline-block; border:solid 1px #eee; padding:1%}
+.Tbl {border-collapse:collapse;width:100%; clear:both;  }
+/*.Tbl tbody tr:hover{ background-color:#eee; cursor:pointer}*/
+.Tbl th { height:35px; color: #244db7;  text-align:left; font-weight:800; text-align:center; line-height:16px;border-bottom: 1px solid #244db7; font-size:14px; background-color:#fbfcff}
+.Tbl td{height:40px;  border-bottom: 1px solid #cccdce;text-align:center;line-height:18px; padding:5px 0  5px 0;word-break:break-all}
+.Tbl td a {color: #4e5056; font-weight:600 }
+.Tbl td a:hover{ color:#0574b3; text-decoration:underline}
+
+.bbs_tex01{ font-weight:600; color:#000}
+.bbs_tex02{ font-size:11px; display:block}
+.sortarr_up{ width:10px; height:11px; background:url(../images/btn_sort.gif) no-repeat 0 0; display:inline-block; margin-left:5px}
+.sortarr_down{ width:10px; height:11px; background:url(../images/btn_sort.gif) no-repeat 0 -76px; display:inline-block;margin-left:5px}
+
+/* 양식분석결과 */
+.rbox{ width:410px; height:490px; padding:20px; border:solid 1px #c3c3c3; border-radius:5px; margin-top:15px; text-align:center}
+.rbox .tex01{ font-size:22px; font-weight:bold; color:#6a6b6c; margin:30px 0 20px 0}
+.rbox .tex02{ width:100%;  font-size:22px; border-top:solid 1px #d8d8d8;border-bottom:solid 1px #d8d8d8; display:inline-block; padding:60px 0 30px 0}
+.rbox .tex02 .tnum01{ color:#fd8f07; font-size:55px; font-weight:800; display:block; margin-bottom:20px }
+.rbox .tex02 .tnum02{ color:#6a6b6c; font-size:22px;font-weight:600;vertical-align:middle; display:inline-block; margin-top:10px}
+.rbox .tex02  img{vertical-align:middle; margin-right:5px}
+.rbox_wrap{ width:100%; display:inline-block; margin-top:45px}
+.rbox_wrap .rb_l{ width:45%; float:left; }
+.rbox_wrap .rb_c { width:10px; height:190px; border-left:dotted 1px #999;float:left ; margin-left:20px}
+.rbox_wrap .rb_l .t01{ font-size:40px; font-weight:800; color:#000; margin:30px 0 35px 0}
+.rbox_wrap .rb_l .t04{ font-size:40px; font-weight:800; color:#fd8f07;margin:30px 0 35px 0}
+.rbox_wrap .rb_l .t05{ font-size:18px;color:#505152; margin-bottom:15px}
+.rbox .info_m{ width:100%; height:176px; background:url(../images/ico_info.gif) no-repeat  center 0 ; font-size:18px; padding:110px 0 0 0; margin-top:120px; line-height:24px}
+
+/* Button */
+.btn{background-color:#5f5f61; color:#fff; height:35px;line-height:35px;display:inline-block; padding:0 20px 0 20px; margin:0 2px 0 2px; border-radius:4px}
+.btn:hover{ background-color:#383839}
+.btn.b02{background-color:#244db7; }
+.btn.b02:hover{ background-color:#19398d}
+.btn.b03{ width:25px; height:29px;line-height:29px;background-color:#fff; border:solid 1px #c9cbcb ; color:#444;padding:0 6px 0 6px !important;}
+.btn.b03:hover{ border:solid 1px #fd8f07 !important ;   color:#fd8f07  }
+.btn.b03.on{ border:solid 1px #fd8f07 !important ; background:url(../images/ico_check.gif) no-repeat 5px center ; padding-left:17px !important ; color:#fd8f07 }
+
+/* Footer */
+#footer{ width:100%;color:#95999d; border-top: solid 1px #d1d6da; margin-top:90px; text-align:center ; clear:both; display:inline-block}
+#footer p{width:388px; padding-left:22px; margin:10px auto; display:inline-block; text-align:left; font-size:12px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
